@@ -1,9 +1,8 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
 import App from './App';
+import { shallow, ShallowWrapper } from 'enzyme'
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('should run Main component', () => {
+  let component:ShallowWrapper<{}, {}, React.Component<{}, {}, any>> = shallow(<App />)
+  expect(component.find('Main').length).toBe(1)
 });

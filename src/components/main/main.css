@@ -1,0 +1,170 @@
+html{
+    scroll-behavior: smooth;
+}
+.extra_div_top {
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, orange, red, rgb(195, 0, 255));
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 10px black;
+    backdrop-filter: blur(10px);
+}
+
+.icon {
+    padding: 20px 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+}
+
+.menu_1 a {
+    font-size: 18px;
+    color: rgb(179, 179, 179);
+    font-weight: 600;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.github_icon {
+    color: rgb(128, 128, 128);
+
+}
+
+.banner_div {
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 40px black;
+}
+
+.banner_img {
+    width: 100%;
+    filter: grayscale(0.6);
+    filter: blur(5px) grayscale(0.5) ;
+}
+
+.banner_background {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(black, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8), black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner_text {
+    width: 1000px;
+}
+
+.banner_background h1 {
+    color: rgb(255, 208, 0);
+    line-height: 30px;
+    font-size: 5rem;
+    letter-spacing: 2px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.mission {
+    color: rgb(209, 209, 209);
+    margin-top: 60px;
+    display: block;
+    font-size: 6rem;
+}
+
+.banner_background p {
+    color: rgb(224, 224, 224);
+    font-size: 23px;
+    margin-top: 50px;
+    letter-spacing: 3px;
+    word-spacing: 3px;
+    font-family: sans-serif;
+
+}
+
+.extra_div_banner {
+    width: 100px;
+    background-color: rgb(255, 208, 0);
+    height: 10px;
+    border-radius: 4px;
+}
+.copy_right{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width:1200px) {
+    .banner_div {
+        overflow: hidden !important;
+    }
+
+    .banner_img {
+        width: 1200px !important;
+        /* height: 80vh !important; */
+    }
+
+    .banner_background h1 {
+        line-height: 20px;
+        font-size: 4rem;
+    }
+
+    .mission {
+        font-size: 5rem;
+    }
+    .banner_background p {
+        font-size: 20px;
+    }
+    .banner_text {
+        width: 90%;
+    }
+
+}
+@media (max-width:700px) {
+
+    .banner_background h1 {
+        line-height: 10px;
+        font-size: 3rem;
+    }
+
+    .mission {
+        font-size: 4rem;
+    }
+    .banner_background p {
+        font-size: 17px;
+    }
+    .icon img{
+        width: 200px;
+    }
+
+}
+@media (max-width:500px) {
+    .menu_1{
+        display: none;
+    }
+    .menu {
+        justify-content: flex-end;
+        width: 50px;
+    }
+    .copy_right{
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
