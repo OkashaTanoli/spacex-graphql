@@ -31,6 +31,7 @@ function Launches({ callBack, id }: { callBack: any, id: string }) {
                                 else if (val?.mission_name?.toLowerCase().includes(search.toLowerCase())) {
                                     return val
                                 }
+                                return
                             }).map((val) => {
                                 return (
                                     <div onClick={() => { callBack(val?.id) }} key={val?.id} id={id === val?.id ? 'selected' : ''} className='launches_item'>{val?.mission_name}</div>
