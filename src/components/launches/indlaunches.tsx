@@ -18,16 +18,17 @@ function Indlaunches({ id }: { id: string }) {
         )
     }
     if (error || !data) {
+        console.log(error)
         return (
-            <div className="indlaunch_div">
+            <div className="indlaunch_div error_div">
                 <h1>Error</h1>
             </div>
         )
     }
     return (
-        
+
         <div className='indlaunch_div'>
-            
+
             <div className='indlaunch_head'>
                 <div className='indlaunch_head_name'>{data?.launch?.mission_name}</div>
                 <div className='indlaunch_head_status'>Launch Status: <span className={data?.launch?.launch_success ? 'launch_success_true' : 'launch_success_false'}>{data?.launch?.launch_success === true ? " True" : " False"}</span></div>
