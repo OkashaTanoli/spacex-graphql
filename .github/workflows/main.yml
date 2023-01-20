@@ -42,4 +42,4 @@ jobs:
         run: npm install --global surge
         
       - name: Deploying on surge
-        run: surge ./build timer-tdd-okasha.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+        run: surge ./build spacex-graphgql-okasha.surge.sh --token ${{ secrets.SURGE_TOKEN }}
