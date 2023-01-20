@@ -18,7 +18,6 @@ function Indlaunches({ id }: { id: string }) {
         )
     }
     if (error || !data) {
-        console.log(error)
         return (
             <div className="indlaunch_div error_div">
                 <h1>Error</h1>

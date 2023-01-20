@@ -6,7 +6,13 @@ import { useLaunchesQuery } from '../../generated/graphql'
 function Launches({ callBack, id }: { callBack: any, id: string }) {
     const { loading, error, data } = useLaunchesQuery()
     const [search, setSearch] = useState('')
-
+    if (error) {
+        return (
+            <div className="launches_div error_div">
+                <h1>Error</h1>
+            </div>
+        )
+    }
     return (
         <div className='launches_div'>
             <div className='search_div'>
